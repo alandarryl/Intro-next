@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { URL } from "../../utils/constant/url.js";
 
+import Article from "./Article.jsx";
+
 
     async function fetchArticles() {
         const res = await fetch(URL.ARTICLE_GET, {next: {revalidate: 60} } );
@@ -16,7 +18,9 @@ import { URL } from "../../utils/constant/url.js";
 export default async function index(){
     const articles = await fetchArticles();
 
-    console.log(articles);
+    // console.log(articles);
+
+    const tenArticles = articles.slice(0, 10);
 
     return(
         <div className="container px-4 py-5" >
@@ -24,6 +28,13 @@ export default async function index(){
             <p className="text-center" >Les articles</p>
             <div className="row g-3 mt-4" >
                 {/* Affichage des articles ici !  */}
+                {tenArticles?.map((article) =>(
+                    <Article 
+                    key={article.id}
+                        title={article.title}
+                        body={article.body}
+                    />
+                ) ) }
             </div>
         </div>
     );

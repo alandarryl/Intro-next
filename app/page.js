@@ -1,7 +1,12 @@
 import Image from "next/image";
+
 import Link from "next/link";
+import { URL } from "../utils/constant/url";
+
 
 export default function Home() {
+
+
   return (
     <>
       <div className="container px-4 pt-5">
@@ -51,6 +56,7 @@ export default function Home() {
 
         </div>
         {/* FIN CARD 1  */}
+
     </div>
     </>
   );

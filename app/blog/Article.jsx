@@ -1,6 +1,8 @@
 import React from 'react'
 
-function Article({title, body}) {
+import Link from "next/link";
+
+function Article({title, body, lien}) {
     return (
         <div className='col-12 col-md-6 col-xl-4' >
             <div className='card h-100 shadow-sm' >
@@ -9,6 +11,9 @@ function Article({title, body}) {
                     <p className='card-text' >
                         {body}
                     </p>
+                    <Link href={lien} >
+                        Lire cet article
+                    </Link>
                 </div>
             </div>
         </div>

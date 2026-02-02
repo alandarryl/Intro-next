@@ -48,7 +48,7 @@ export default function Home() {
                   on the card and make up 
                   the bulk of the card's content.
                 </p>
-                  <Link href="/blog" >Découvrez la liste de membres</Link>
+                  <Link href="/boss" >Découvrez la liste de membres</Link>
               </div>
             </div>
           </div>

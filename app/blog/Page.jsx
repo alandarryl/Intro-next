@@ -1,6 +1,7 @@
 
 import Link from "next/link";
 import { URL } from "../../utils/constant/url.js";
+import {v4 as uuidv4} from "uuid"
 
 import Article from "./Article.jsx";
 
@@ -29,11 +30,12 @@ export default async function index(){
             <div className="row g-3 mt-4" >
                 {/* Affichage des articles ici !  */}
                 {tenArticles?.map((article) =>(
-                    <Article 
-                    key={article.id}
-                        title={article.title}
-                        body={article.body}
-                    />
+                        <Article 
+                            key={uuidv4()}
+                            title={article.title}
+                            body={article.body}
+                            lien={`/blog/${article.id.toString()}`}
+                        />
                 ) ) }
             </div>
         </div>

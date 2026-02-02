@@ -2,6 +2,8 @@ import React from 'react'
 
 import Link from "next/link";
 
+import LikeBoutton from '../components/LikeButton';
+
 function Article({title, body, lien}) {
     return (
         <div className='col-12 col-md-6 col-xl-4' >
@@ -11,6 +13,7 @@ function Article({title, body, lien}) {
                     <p className='card-text' >
                         {body}
                     </p>
+                    <LikeBoutton/>
                     <Link href={lien} >
                         Lire cet article
                     </Link>

@@ -19,7 +19,7 @@ import Article from "./Article.jsx";
 export default async function index(){
     const articles = await fetchArticles();
 
-    // console.log(articles);
+    console.log(articles);
 
     const tenArticles = articles.slice(0, 10);
 

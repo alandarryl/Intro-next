@@ -23,8 +23,9 @@ async function Liste() {
             <h1>La liste des users</h1>
             {users.map((user) =>(
                 <div key={user.id} >
-                    <p>{user}</p>
-                    <Link></Link>
+                    <h1>{user.name} </h1>
+                    <p>{user.email}</p>
+                    <Link href={`/users/${user.id}`} >contact</Link>
                 </div>
             ) )}
         </div>

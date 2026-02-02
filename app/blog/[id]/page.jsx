@@ -5,9 +5,6 @@ import {URL} from "../../../utils/constant/url.js";
 async function ArticleById(id) {
     const res = await fetch(URL.ARTICLE_GET_BY_ID + '/' + id)
 
-    console.log(res);
-    console.log(res.json);
-
     if(!res)throw new Error('Article not found');
 
     return res.json();
